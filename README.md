@@ -23,3 +23,16 @@ This is a boilerplate project for creating React applications with Vite.
 
    ```bash
    git clone https://github.com/MANOJPATIL143/IPANGRAM-MERN-TEST
+
+2.Install dependencies:
+
+npm install
+# or
+yarn
+
+3.Development
+To start the development server:
+
+npm run dev
+# or
+yarn dev
