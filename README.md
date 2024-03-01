@@ -36,3 +36,43 @@ To start the development server:
 npm run dev
 # or
 yarn dev
+
+# MySQL Connection Guide
+
+This guide provides instructions for establishing a connection to a MySQL database using various programming languages and frameworks.
+
+## Prerequisites
+
+Before connecting to MySQL, ensure that you have the following:
+
+- MySQL Server installed and running.
+- MySQL database created with appropriate permissions.
+- Connection credentials (username, password, host, port).
+
+## Connecting with Node.js (Using mysql package)
+
+const mysql = require('mysql');
+
+// Creating a connection
+const connection = mysql.createConnection({
+  host: 'your_host',
+  user: 'your_username',
+  password: 'your_password',
+  database: 'your_database'
+});
+
+// Connecting to the database
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected to MySQL database');
+});
+
+// Executing SQL queries
+connection.query('SELECT * FROM your_table', (err, results) => {
+  if (err) throw err;
+  console.log(results);
+});
+
+// Closing the connection
+connection.end();
+
